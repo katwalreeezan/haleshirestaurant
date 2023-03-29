@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@layer base {
+  button{
+    @apply py-2 px-2 bg-black text-center text-white
+  }
+  h1{
+    @apply font-bold
+  }
+}
