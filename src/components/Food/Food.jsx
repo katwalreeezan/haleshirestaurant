@@ -102,7 +102,7 @@ const Food = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-11  place-content-center font-poppins ">
         {item.map((product) => (
-          <div key={product.id} className="w-64 h-auto shadow-2xl rounded-2xl text-center mx-auto px-2 hover:scale-105 duration-300 py-3 ">
+          <div key={product.id} className="w-64 h-auto border-2 border-black rounded-2xl text-center mx-auto px-2 hover:scale-105 duration-300 py-3 ">
             <img
               src={product.image}
               alt="/"

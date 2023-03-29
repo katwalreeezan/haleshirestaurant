@@ -44,10 +44,10 @@ const Navbar = () => {
             Food
           </Link>
           <Link
-            to="/events"
+            to="/contact"
             className="mx-3 hover:text-slate-400 duration-300 "
           >
-            Events
+            Contact
           </Link>
         </div>
         <div className=" z-10 flex  ">
@@ -76,11 +76,9 @@ const Navbar = () => {
             <li className="py-1">
               <Link to="/food">Food</Link>
             </li>
+           
             <li className="py-1">
-              <Link to="/events">Events</Link>
-            </li>
-            <li className="py-1">
-              <Link to="/media">Media</Link>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
