@@ -17,8 +17,9 @@ const Cart = () => {
     <div>
       <div className="md:max-w-[900px]  max-w-[350px] mx-auto mt-12 mb-56">
         {cart.length === 0 && (
-          <div className="text-center font-mono font-extrabold text-2xl border border-black">
+          <div className="text-center font-mono font-extrabold text-2xl border">
             Your Cart Is Empty
+            <p><img src='https://cdn-icons-png.flaticon.com/512/2038/2038854.png' alt='empty' className="mx-auto w-40 h-auto py-2 "/></p>
           </div>
         )}
         {cart.length !== 0 && (
@@ -51,7 +52,7 @@ const Cart = () => {
                 <input
                   type="text"
                   value={item.quantity}
-                  className="border border-black w-5"
+                  className="border border-black w-5 mb-3"
                 />
                 <button
                   className="rounded-md  py-[3px] ml-1  "
