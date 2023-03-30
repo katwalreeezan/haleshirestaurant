@@ -10,7 +10,7 @@ import {
 import { useSelector } from "react-redux";
 
 const Navbar = () => {
-  const itemData = useSelector((state) => state.cart);
+  const {cart} = useSelector((state) => state.cart);
   const [nav, setNav] = useState(false);
   const handleClick = () => {
     setNav(!nav);
@@ -54,7 +54,7 @@ const Navbar = () => {
           <Link to="/cart" className="px-5 hover:text-slate-400 duration-300 ">
             <ShoppingCart size={32} />
             <span className=" text-white absolute top-[55px] right-12 md:absolute md:top-[61px] md:right-4  bg-red-500 rounded-full px-2">
-              {itemData.length===0?'':itemData.length}
+              {cart.length===0?'':cart.length}
             </span>
           </Link>
         </div>

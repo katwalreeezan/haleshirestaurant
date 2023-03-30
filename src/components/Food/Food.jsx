@@ -20,6 +20,7 @@ const Food = () => {
       price: 160,
       image:
         "https://cdn.pixabay.com/photo/2019/01/29/18/05/burger-3962997_960_720.jpg",
+        quantity: 1,
     },
     {
       id: "3",
@@ -27,6 +28,7 @@ const Food = () => {
       price: 140,
       image:
         "https://cdn.pixabay.com/photo/2019/05/31/01/53/chowmein-4241265_960_720.jpg",
+        quantity: 1,
     },
     {
       id: "4",
@@ -34,6 +36,7 @@ const Food = () => {
       price: 400,
       image:
         "https://cdn.pixabay.com/photo/2015/12/07/22/27/pizza-1081534_960_720.jpg",
+        quantity: 1,
     },
     {
       id: "5",
@@ -41,6 +44,7 @@ const Food = () => {
       price: 300,
       image:
         "https://cdn.pixabay.com/photo/2018/04/21/12/03/food-3338309_960_720.jpg",
+        quantity: 1,
     },
     {
       id: "6",
@@ -48,6 +52,7 @@ const Food = () => {
       price: 200,
       image:
         "https://cdn.pixabay.com/photo/2018/03/15/12/16/food-3228057_960_720.jpg",
+        quantity: 1,
     },
     {
       id: "7",
@@ -55,6 +60,7 @@ const Food = () => {
       price: 160,
       image:
         "https://1.bp.blogspot.com/-y6BOEGGRaM8/X8249tMXwGI/AAAAAAAADRQ/KqD2hzYdfEkUy4ioPJdaJXACUs--Zd-0QCLcBGAsYHQ/s2048/IMG_20201207_103726.jpg",
+        quantity: 1,
     },
     {
       id: "8",
@@ -62,6 +68,7 @@ const Food = () => {
       price: 250,
       image:
         "https://www.licious.in/blog/wp-content/uploads/2020/12/Hyderabadi-chicken-Biryani-750x750.jpg",
+        quantity: 1,
     },
     {
       id: "9",
@@ -69,6 +76,7 @@ const Food = () => {
       price: 200,
       image:
         "https://tkathmandukitchen.com/wp-content/uploads/2019/04/khaja-set.jpg",
+        quantity: 1,
     },
     {
       id: "10",
@@ -76,6 +84,7 @@ const Food = () => {
       price: 70,
       image:
         "https://cdn.shopify.com/s/files/1/0862/8416/products/Mexican-Coca-Cola.jpg?v=1465322372",
+        quantity: 1,
     },
     {
       id: "11",
@@ -83,6 +92,7 @@ const Food = () => {
       price: 70,
       image:
         "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71Cd1SW1pVL.jpg",
+        quantity: 1,
     },
     {
       id: "12",
@@ -90,6 +100,7 @@ const Food = () => {
       price: 70,
       image:
         "https://cdnprod.mafretailproxy.com/sys-master-root/h0d/h44/47856206774302/1700Wx1700H_605045_main.jpg",
+        quantity: 1,
     },
   ];
   return (
