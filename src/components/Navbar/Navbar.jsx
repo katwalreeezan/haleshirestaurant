@@ -8,9 +8,11 @@ import {
   ShoppingCart,
 } from "phosphor-react";
 import { useSelector } from "react-redux";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
   const {cart} = useSelector((state) => state.cart);
+  const { loginWithRedirect ,logout, isAuthenticated, user} = useAuth0();
   const [nav, setNav] = useState(false);
   const handleClick = () => {
     setNav(!nav);
@@ -47,7 +49,16 @@ const Navbar = () => {
           >
             Contact
           </Link>
-        </div>
+          </div>
+          
+          {isAuthenticated &&(<p className=" text-orange-300   italic text-justify">{user.name}</p>)}
+          {isAuthenticated?(
+            
+          <button className="mx-3 w-32  font-poppins border border-white rounded-lg hover:text-slate-400 duration-300" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+      Log Out
+    </button>):
+         ( <button className="mx-3 w-24 font-poppins border border-white rounded-lg hover:text-slate-400 duration-300 " onClick={() => loginWithRedirect()}>Log In</button>)}
+        
         <div className=" z-10 flex  ">
           <Link to="/cart" className="px-5 hover:text-slate-400 duration-300 ">
             <ShoppingCart size={32} />

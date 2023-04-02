@@ -17,8 +17,8 @@ const Cart = () => {
     <div>
       <div className="md:max-w-[900px]  max-w-[350px] mx-auto mt-12 mb-56">
         {cart.length === 0 && (
-          <div className="text-center font-mono font-extrabold text-2xl border">
-            Your Cart Is Empty
+          <div className="text-center  font-mono font-extrabold text-2xl">
+            Your Order Is Empty
             <p><img src='https://cdn-icons-png.flaticon.com/512/2038/2038854.png' alt='empty' className="mx-auto w-40 h-auto py-2 "/></p>
           </div>
         )}

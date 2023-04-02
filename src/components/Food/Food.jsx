@@ -2,8 +2,10 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { add } from "../../store/cartSlice";
 import Footer from "../Footer/Footer";
+import { useAuth0 } from "@auth0/auth0-react";
 const Food = () => {
  const dispatch=useDispatch();
+ const {isAuthenticated} = useAuth0();
   const item = [
     {
       id: "1",
@@ -111,6 +113,9 @@ const Food = () => {
           Food Items & Beverages
         </h1>
       </div>
+      {isAuthenticated ?'':<div className="max-w-[200px] mx-auto my-5 ">
+     <p className="text-center italic font-serif bg-green-500 rounded-lg">Please login for the order</p>
+      </div>}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-11  place-content-center font-poppins ">
         {item.map((product) => (
           <div key={product.id} className="w-64 h-auto border-2 border-black rounded-2xl text-center mx-auto px-2 hover:scale-105 duration-300 py-3 ">
@@ -121,7 +126,8 @@ const Food = () => {
             />
             <h1 className="my-1">{product.title}</h1>
             <p className="italic my-1">Rs:{product.price}</p>
-            <button onClick={()=>dispatch(add(product))} className="my-2 hover:bg-slate-600">Add To Cart</button>
+            {isAuthenticated ?(
+            <button onClick={()=>dispatch(add(product))} className="my-2 bg-black hover:bg-slate-600">Add To Cart</button>):''}
           </div>
         ))}
       </div>
