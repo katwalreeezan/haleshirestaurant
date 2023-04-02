@@ -37,9 +37,7 @@ const Navbar = () => {
           <Link to="/" className="mx-3 hover:text-slate-400 duration-300 ">
             Home
           </Link>
-          <Link to="/about" className="mx-3 hover:text-slate-400 duration-300 ">
-            About
-          </Link>
+          
           <Link to="/food" className="mx-3 hover:text-slate-400 duration-300 ">
             Food
           </Link>
@@ -70,9 +68,7 @@ const Navbar = () => {
             <li className="py-1">
               <Link to="/">Home</Link>
             </li>
-            <li className="py-1">
-              <Link to="/about">About</Link>
-            </li>
+           
             <li className="py-1">
               <Link to="/food">Food</Link>
             </li>

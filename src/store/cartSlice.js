@@ -39,12 +39,14 @@ const cartSlice=createSlice({
                 state.totalPrice += state.cart[index].price;
             }
           },
-          decreaseItemQuantity(state,action){
+          decreaseItemQuantity(state, action) {
             const index = state.cart.findIndex((item) => item.id === action.payload.id);
             if (index !== -1) {
+              if (state.cart[index].quantity > 0) {
                 state.cart[index].quantity -= 1;
                 state.totalQuantity -= 1;
                 state.totalPrice -= state.cart[index].price;
+              }
             }
           }
     }
