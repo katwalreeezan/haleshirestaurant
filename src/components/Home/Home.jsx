@@ -1,15 +1,35 @@
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Footer from "../Footer/Footer";
-
+import SliderHome from "./SliderHome";
 const Home = () => {
+  const settings = {
+    
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+  };
   return (
-    <div>
+    <div >
+      <div className="overflow-hidden">
+       <Slider {...settings}>
+        {SliderHome.map((data) => 
+          
+            
+              <div key={data.id} className="max-w-9xl mx-auto  object-center">
+                <img className="relative w-full " src={data.image} alt="" />
+                
+              </div>
+            
+        
+        )}
+      </Slider>
+      </div>
       
-      <img
-        className="w-full "
-        src="https://cdn.pixabay.com/photo/2018/03/07/18/42/menu-3206749_960_720.jpg"
-        alt="menubar"
-      />
       <div className="max-w-[9xl] mx-auto mb-9  px-3">
         <div className="max-w-[600px] mx-auto  leading-relaxed text-center  px-3 text-neutral-600 text-2xl font-serif py-6">
           <p>
