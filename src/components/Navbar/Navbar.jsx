@@ -33,7 +33,7 @@ const Navbar = () => {
 
       <div className="bg-black text-white flex  justify-between items-center  px-2  border-white ">
         <div className="container">
-          <img src="./images/halesi.png" alt="logo" className="w-60 h-28 " />
+          <img src="./images/halesi.png" alt="logo" className="w-3/2 h-28 " />
         </div>
         <div className="hidden md:flex text-center items-center  font-poppins uppercase mr-16 ">
           <Link to="/" className="mx-3 hover:text-slate-400 duration-300 ">
@@ -57,7 +57,7 @@ const Navbar = () => {
           <button className="mx-3 w-32  font-poppins border border-white rounded-lg hover:text-slate-400 duration-300" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
       Log Out
     </button>):
-         ( <button className="mx-3 w-24 font-poppins border border-white rounded-lg hover:text-slate-400 duration-300 " onClick={() => loginWithRedirect()}>Log In</button>)}
+         ( <button className="mx-3 w-32 font-poppins border border-white rounded-lg hover:text-slate-400 duration-300 " onClick={() => loginWithRedirect()}>Log In</button>)}
         
         <div className=" z-10 flex  ">
           <Link to="/cart" className="px-5 hover:text-slate-400 duration-300 ">
