@@ -8,11 +8,20 @@ import {
   ShoppingCart,
 } from "phosphor-react";
 import { useSelector } from "react-redux";
-import { useAuth0 } from "@auth0/auth0-react";
+import { useNavigate } from "react-router-dom";
+import { clearcart } from "../../store/cartSlice";
+import { useDispatch } from "react-redux";
 
 const Navbar = () => {
+  const dispatch=useDispatch();
+  const Navigate=useNavigate();
   const {cart} = useSelector((state) => state.cart);
-  const { loginWithRedirect ,logout, isAuthenticated, user} = useAuth0();
+  const data = JSON.parse(localStorage.getItem('loggedin'));
+ const handlelogout=()=>{
+  localStorage.removeItem('loggedin')
+  dispatch(clearcart())
+  Navigate('/login')
+ }
   const [nav, setNav] = useState(false);
   const handleClick = () => {
     setNav(!nav);
@@ -49,15 +58,19 @@ const Navbar = () => {
           >
             Contact
           </Link>
-          </div>
+          <div className="flex">
+            {data?
+              (<button className="border rounded-lg mx-3" onClick={handlelogout}>LOGOUT</button>):
+           ( <button className="w-20 border rounded-lg mx-3"><Link to='/login'>LOG IN</Link></button>)}
           
-          {isAuthenticated &&(<p className=" text-orange-300   italic text-justify">{user.name}</p>)}
-          {isAuthenticated?(
+          </div>
+        
+          </div>
+       
+          
+          
             
-          <button className="mx-3 w-32  font-poppins border border-white rounded-lg hover:text-slate-400 duration-300" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-      Log Out
-    </button>):
-         ( <button className="mx-3 w-32 font-poppins border border-white rounded-lg hover:text-slate-400 duration-300 " onClick={() => loginWithRedirect()}>Log In</button>)}
+         
         
         <div className=" z-10 flex  ">
           <Link to="/cart" className="px-5 hover:text-slate-400 duration-300 ">

@@ -21,7 +21,7 @@ const Home = () => {
           
             
               <div key={data.id} className="max-w-9xl mx-auto  object-center">
-                <img className="relative w-full " src={data.image} alt="" />
+                <img className="relative w-full md:h-[600px] object-center " src={data.image} alt="" />
                 
               </div>
             

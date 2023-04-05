@@ -6,6 +6,8 @@ import Contact from "./components/Contact/Contact";
 import Food from "./components/Food/Food";
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/checkout' element={<Checkout/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/register' element={<Register/>}/>
      </Routes>
      </BrowserRouter>
     </div>
