@@ -13,15 +13,15 @@ import { clearcart } from "../../store/cartSlice";
 import { useDispatch } from "react-redux";
 
 const Navbar = () => {
-  const dispatch=useDispatch();
-  const Navigate=useNavigate();
-  const {cart} = useSelector((state) => state.cart);
-  const data = JSON.parse(localStorage.getItem('loggedin'));
- const handlelogout=()=>{
-  localStorage.removeItem('loggedin')
-  dispatch(clearcart())
-  Navigate('/login')
- }
+  const dispatch = useDispatch();
+  const Navigate = useNavigate();
+  const { cart } = useSelector((state) => state.cart);
+  const data = JSON.parse(localStorage.getItem("loggedin"));
+  const handlelogout = () => {
+    localStorage.removeItem("loggedin");
+    dispatch(clearcart());
+    Navigate("/login");
+  };
   const [nav, setNav] = useState(false);
   const handleClick = () => {
     setNav(!nav);
@@ -48,7 +48,7 @@ const Navbar = () => {
           <Link to="/" className="mx-3 hover:text-slate-400 duration-300 ">
             Home
           </Link>
-          
+
           <Link to="/food" className="mx-3 hover:text-slate-400 duration-300 ">
             Food
           </Link>
@@ -59,25 +59,23 @@ const Navbar = () => {
             Contact
           </Link>
           <div className="flex">
-            
-            {data?
-              (<button className="border rounded-lg mx-3" onClick={handlelogout}>LOGOUT</button>):
-           ( <button className="w-20 border rounded-lg mx-3"><Link to='/login'>LOG IN</Link></button>)}
-          
+            {data ? (
+              <button className="border rounded-lg mx-3" onClick={handlelogout}>
+                LOGOUT
+              </button>
+            ) : (
+              <button className="w-20 border rounded-lg mx-3">
+                <Link to="/login">LOG IN</Link>
+              </button>
+            )}
           </div>
-        
-          </div>
-       
-          
-          
-            
-         
-        
+        </div>
+
         <div className=" z-10 flex  ">
           <Link to="/cart" className="px-5 hover:text-slate-400 duration-300 ">
             <ShoppingCart size={32} />
             <span className=" text-white absolute top-[55px] right-12 md:absolute md:top-[61px] md:right-4  bg-red-500 rounded-full px-2">
-              {cart.length===0?'':cart.length}
+              {cart.length === 0 ? "" : cart.length}
             </span>
           </Link>
         </div>
@@ -93,11 +91,11 @@ const Navbar = () => {
             <li className="py-1">
               <Link to="/">Home</Link>
             </li>
-           
+
             <li className="py-1">
               <Link to="/food">Food</Link>
             </li>
-           
+
             <li className="py-1">
               <Link to="/contact">Contact</Link>
             </li>

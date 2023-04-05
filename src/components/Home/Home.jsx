@@ -6,7 +6,6 @@ import Footer from "../Footer/Footer";
 import SliderHome from "./SliderHome";
 const Home = () => {
   const settings = {
-    
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
@@ -14,22 +13,21 @@ const Home = () => {
     autoplay: true,
   };
   return (
-    <div >
+    <div>
       <div className="overflow-hidden">
-       <Slider {...settings}>
-        {SliderHome.map((data) => 
-          
-            
-              <div key={data.id} className="max-w-9xl mx-auto  object-center">
-                <img className="relative w-full md:h-[600px] object-center " src={data.image} alt="" />
-                
-              </div>
-            
-        
-        )}
-      </Slider>
+        <Slider {...settings}>
+          {SliderHome.map((data) => (
+            <div key={data.id} className="max-w-9xl mx-auto  object-center">
+              <img
+                className="relative w-full md:h-[600px] object-center "
+                src={data.image}
+                alt=""
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
-      
+
       <div className="max-w-[9xl] mx-auto mb-9  px-3">
         <div className="max-w-[600px] mx-auto  leading-relaxed text-center  px-3 text-neutral-600 text-2xl font-serif py-6">
           <p>
@@ -43,7 +41,8 @@ const Home = () => {
           <div className="flex flex-wrap justify-center gap-10  ">
             <div className="w-60  shadow-2xl  text-center hover:scale-105 duration-300 ">
               <img
-                src="https://cdn.pixabay.com/photo/2014/09/17/20/26/restaurant-449952_960_720.jpg" alt='/'
+                src="https://cdn.pixabay.com/photo/2014/09/17/20/26/restaurant-449952_960_720.jpg"
+                alt="/"
                 className="w-60 h-52 "
               />
               <h1 className="py-2">Restaurant</h1>
@@ -54,7 +53,8 @@ const Home = () => {
             </div>
             <div className="w-60 shadow-2xl text-center hover:scale-105 duration-300">
               <img
-                src="https://cdn.pixabay.com/photo/2017/06/06/22/46/mediterranean-cuisine-2378758_960_720.jpg" alt='/'
+                src="https://cdn.pixabay.com/photo/2017/06/06/22/46/mediterranean-cuisine-2378758_960_720.jpg"
+                alt="/"
                 className="w-60 h-52 "
               />
               <h1 className="py-2">Food</h1>
@@ -65,7 +65,8 @@ const Home = () => {
             </div>
             <div className="w-60 border shadow-2xl text-center hover:scale-105 duration-300">
               <img
-                src="https://cdn.pixabay.com/photo/2017/07/11/18/07/market-2494520_960_720.jpg" alt='/'
+                src="https://cdn.pixabay.com/photo/2017/07/11/18/07/market-2494520_960_720.jpg"
+                alt="/"
                 className="w-60 h-52 "
               />
               <h1 className="py-2">Market</h1>
@@ -77,7 +78,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
