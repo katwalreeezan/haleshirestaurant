@@ -14,7 +14,7 @@ const Home = () => {
   };
   return (
     <div>
-      <div className="overflow-hidden">
+      <div className="overflow-hidden ">
         <Slider {...settings}>
           {SliderHome.map((data) => (
             <div key={data.id} className="max-w-9xl mx-auto  object-center">

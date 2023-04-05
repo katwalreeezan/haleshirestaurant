@@ -60,11 +60,11 @@ const Navbar = () => {
           </Link>
           <div className="flex">
             {data ? (
-              <button className="border rounded-lg mx-3" onClick={handlelogout}>
+              <button className="border rounded-lg mx-3 hover:text-slate-400 duration-300" onClick={handlelogout}>
                 LOGOUT
               </button>
             ) : (
-              <button className="w-20 border rounded-lg mx-3">
+              <button className="w-20 border rounded-lg mx-3 hover:text-slate-400 duration-300">
                 <Link to="/login">LOG IN</Link>
               </button>
             )}
@@ -83,7 +83,7 @@ const Navbar = () => {
           onClick={handleClick}
           className={
             nav
-              ? "md:hidden overflow-y-hidden  h-1/3 absolute top-28 left-0  bg-zinc-800 w-full text-center"
+              ? "md:hidden overflow-y-hidden  h-1/3 absolute top-28 left-0  bg-zinc-800 w-full text-center z-10n"
               : "hidden"
           }
         >
