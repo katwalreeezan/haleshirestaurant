@@ -8,10 +8,14 @@ const Register = () => {
         password:""
     })
     const handlesubmit=(e)=>{
-        e.preventDefault();
-        localStorage.setItem("user",JSON.stringify(input));
-        navigate('/login')
-    }
+      e.preventDefault();
+      if (!input.name || !input.email || !input.password) {
+
+        alert('Empty name or email or password')
+      }
+      localStorage.setItem("user",JSON.stringify(input));
+      navigate('/login')
+  }
   return (
     <div className='max-w-xl mx-auto'>
     <div className='max-w-[500px] mx-auto border border-black mt-14 rounded-lg'>

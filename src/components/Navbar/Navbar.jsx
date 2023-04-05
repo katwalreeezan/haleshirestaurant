@@ -59,6 +59,7 @@ const Navbar = () => {
             Contact
           </Link>
           <div className="flex">
+            
             {data?
               (<button className="border rounded-lg mx-3" onClick={handlelogout}>LOGOUT</button>):
            ( <button className="w-20 border rounded-lg mx-3"><Link to='/login'>LOG IN</Link></button>)}
