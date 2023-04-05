@@ -47,8 +47,8 @@ const Contact = () => {
 
   return (
     <div>
-      <h1 className="text-center font-poppins text-2xl max-w-sm bg-black text-white mx-auto mt-12 mb-9">
-        Contact
+      <h1 className="text-center font-poppins text-2xl max-w-[450px] bg-black text-white mx-auto mt-12 mb-9">
+        Contact Form
       </h1>
       <div className=" max-w-sm md:max-w-md  mx-auto border border-black my-9 px-5 py-7 font-poppins  bg-black text-white rounded-lg">
         <Formik
