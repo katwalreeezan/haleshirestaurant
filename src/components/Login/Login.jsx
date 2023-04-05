@@ -23,7 +23,7 @@ const Login = () => {
   };
   return (
     <div className="max-w-xl mx-auto">
-      <div className="max-w-[500px] mx-auto border border-black mt-14 rounded-lg">
+      <div className="md:max-w-[500px] max-w-[370px]  mx-auto border border-black mt-14 rounded-lg">
         <h1 className="uppercase font-semibold text-2xl text-center my-10">
           login
         </h1>

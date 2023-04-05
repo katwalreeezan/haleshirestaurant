@@ -58,6 +58,7 @@ const Navbar = () => {
           >
             Contact
           </Link>
+          </div>
           <div className="flex">
             {data ? (
               <button className="border rounded-lg mx-3 hover:text-slate-400 duration-300" onClick={handlelogout}>
@@ -69,7 +70,7 @@ const Navbar = () => {
               </button>
             )}
           </div>
-        </div>
+        
 
         <div className=" z-10 flex  ">
           <Link to="/cart" className="px-5 hover:text-slate-400 duration-300 ">
@@ -87,7 +88,7 @@ const Navbar = () => {
               : "hidden"
           }
         >
-          <ul className="mt-6 text-xl font-poppins uppercase">
+          <ul className="mt-14 text-xl font-poppins uppercase">
             <li className="py-1">
               <Link to="/">Home</Link>
             </li>
