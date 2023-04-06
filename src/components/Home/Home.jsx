@@ -14,15 +14,17 @@ const Home = () => {
   };
   return (
     <div>
-      <div className="overflow-hidden ">
+      <div className="overflow-hidden  ">
         <Slider {...settings}>
           {SliderHome.map((data) => (
-            <div key={data.id} className="max-w-9xl mx-auto  object-center">
+            <div key={data.id} className="max-w-9xl mx-auto relative w-full object-center">
               <img
                 className="relative w-full md:h-[600px] object-center "
                 src={data.image}
                 alt=""
               />
+              <div className="absolute inset-0 bg-black opacity-50"></div>
+              <h1 className="absolute inset-0 flex items-center justify-center text-3xl text-center md:text-5xl font-serif text-white px-4">{data.text}</h1>
             </div>
           ))}
         </Slider>

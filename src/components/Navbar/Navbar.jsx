@@ -40,11 +40,11 @@ const Navbar = () => {
         </span>
       </div>
 
-      <div className="bg-black text-white flex  justify-between items-center  px-2  border-white ">
+      <div className="bg-black text-white flex  justify-between items-center  px-2  border-t  border-white">
         <div className="container">
           <img src="./images/halesi.png" alt="logo" className="w-3/2 h-28 " />
         </div>
-        <div className="hidden md:flex text-center items-center  font-poppins uppercase mr-16 ">
+        <div className="hidden md:flex text-center items-center  font-serif uppercase mr-16 ">
           <Link to="/" className="mx-3 hover:text-slate-400 duration-300 ">
             Home
           </Link>
@@ -61,11 +61,11 @@ const Navbar = () => {
           </div>
           <div className="flex">
             {data ? (
-              <button className="border rounded-lg mx-3 hover:text-slate-400 duration-300" onClick={handlelogout}>
+              <button className="border rounded-lg mx-3 hover:text-slate-400 duration-300 font-serif" onClick={handlelogout}>
                 LOGOUT
               </button>
             ) : (
-              <button className="w-20 border rounded-lg mx-3 hover:text-slate-400 duration-300">
+              <button className="w-20 border rounded-lg mx-3 hover:text-slate-400 duration-300 font-serif">
                 <Link to="/login">LOG IN</Link>
               </button>
             )}

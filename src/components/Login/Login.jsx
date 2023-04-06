@@ -1,7 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
+
 const Login = () => {
+
+  
   const Navigate = useNavigate();
   const [input, setInput] = useState({
     email: "",
@@ -13,8 +17,12 @@ const Login = () => {
     if (
       input.email === loggeduser.email &&
       input.password === loggeduser.password
+      
     ) {
       localStorage.setItem("loggedin", true);
+     
+      
+     
 
       Navigate("/food");
     } else {
@@ -53,7 +61,8 @@ const Login = () => {
             />
             <span className="">Password</span>
           </div>
-          <button className="mx-auto block my-6">Login</button>
+          
+          <button  className="mx-auto block my-6">Login</button>
           <div className="text-center my-8">
             Don't have an account{" "}
             <Link to="/register" className="underline font-bold">
@@ -62,6 +71,7 @@ const Login = () => {
           </div>
         </form>
       </div>
+    
     </div>
   );
 };

@@ -10,7 +10,7 @@ const SliderHome=[
           },
           {
             image: "https://cdn.pixabay.com/photo/2018/03/07/18/42/menu-3206749_960_720.jpg",
-            text: "Free Home Delivery Available for max order",
+            text: "Free Home Delivery Available for your order",
           },
     
 ]
